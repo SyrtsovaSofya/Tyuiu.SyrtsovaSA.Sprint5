@@ -7,7 +7,7 @@ public class DataService : ISprint5Task0V11
 {
     public string SaveToFileTextData(int x)
     {
-        string path = $@"{Directory.GetCurrentDirectory()}\OutPutFileTask0.txt";
+        string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask0.txt");
         double y = Math.Round((4 - Math.Pow(x, 3)) / (x * x), 3);
         File.WriteAllText(path, y.ToString());
         return path;

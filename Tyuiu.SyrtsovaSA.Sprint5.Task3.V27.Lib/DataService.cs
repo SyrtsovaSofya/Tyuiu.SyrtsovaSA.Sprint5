@@ -8,8 +8,8 @@ public class DataService : ISprint5Task3V27
     public string SaveToFileTextData(int x)
     {
         string path = Path.Combine(Path.GetTempPath(), "OutPutFileTask3.bin");
-        double y = Math.Round(Math.Pow((x - 1), (3 * x + 1)), 3);
-        using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), encoding: Encoding.UTF8))
+        double y = Math.Round(Math.Pow(x - 1, 3 * x + 1), 3);
+        using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate)))
         {
             writer.Write(BitConverter.GetBytes(y));
         }

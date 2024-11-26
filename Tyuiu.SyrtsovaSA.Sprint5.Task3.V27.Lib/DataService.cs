@@ -13,7 +13,7 @@ public class DataService : ISprint5Task3V27
         y = Math.Round(y, 3);
         using (BinaryWriter writer = new BinaryWriter(File.Open(path, FileMode.OpenOrCreate), Encoding.UTF8))
         {
-            writer.Write(BitConverter.GetBytes(y));
+            writer.Write(BitConverter.GetBytes((int)y));
         }
         return path;
     }

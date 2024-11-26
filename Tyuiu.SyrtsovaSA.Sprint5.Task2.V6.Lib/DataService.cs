@@ -1,5 +1,5 @@
-using tyuiu.cources.programming.interfaces.Sprint5;
-
+using tyuiu.cources.programming.interfaces.Sprint5; 
+ 
 namespace Tyuiu.SyrtsovaSA.Sprint5.Task2.V6.Lib;
 
 public class DataService : ISprint5Task2V6
@@ -42,4 +42,4 @@ public class DataService : ISprint5Task2V6
         }
         return path;
     }
-}
+} 

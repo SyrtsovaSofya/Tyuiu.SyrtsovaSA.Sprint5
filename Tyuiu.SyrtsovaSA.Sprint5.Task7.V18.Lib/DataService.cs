@@ -6,13 +6,10 @@ public class DataService : ISprint5Task7V18
 {
     public string LoadDataAndSave(string path)
     {
-        string pathSaveFile = @"C:\DataSprint5\OutPutDataFileTask7V18.txt";
-        FileInfo fileInfo = new FileInfo(pathSaveFile);
-        if (fileInfo.Exists)
-            File.Delete(pathSaveFile);
         string str = File.ReadAllText(path);
         str = str.Replace("н", "нн");
-        File.AppendAllText(pathSaveFile, str);
+        string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V18.txt");
+        File.WriteAllText(pathSaveFile, str);
         return pathSaveFile;
     }
 }

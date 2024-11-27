@@ -6,9 +6,9 @@ public class DataService : ISprint5Task7V18
 {
     public string LoadDataAndSave(string path)
     {
-        string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutFileTask7.txt");
+        string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V18.txt");
         FileInfo fileInfo = new FileInfo(pathSaveFile);
-        if (fileInfo.Exists )
+        if (fileInfo.Exists)
             File.Delete(pathSaveFile);
         string str = File.ReadAllText(path);
         str = str.Replace("н", "нн");

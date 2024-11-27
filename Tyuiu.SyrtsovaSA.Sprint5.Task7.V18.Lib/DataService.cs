@@ -10,9 +10,15 @@ public class DataService : ISprint5Task7V18
         FileInfo fileInfo = new FileInfo(pathSaveFile);
         if (fileInfo.Exists)
             File.Delete(pathSaveFile);
-        string str = File.ReadAllText(path);
-        str = str.Replace("н", "нн");
-        File.AppendAllText(pathSaveFile, str);
+        using (StreamReader reader = new StreamReader(path))
+        {
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                string str = line.Replace("н", "нн");
+                File.AppendAllText(pathSaveFile, str);
+            }
+        }
         return pathSaveFile;
     }
 } 

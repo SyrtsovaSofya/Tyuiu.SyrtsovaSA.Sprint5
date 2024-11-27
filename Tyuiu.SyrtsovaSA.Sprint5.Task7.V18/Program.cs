@@ -22,7 +22,7 @@ class Program
         Console.WriteLine("* ИСХОДНЫЕ ДАННЫЕ:                                                     *"); 
         Console.WriteLine("************************************************************************");
         string path = @"C:\DataSprint5\InPutDataFileTask7V18.txt";
-        string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V18.txt");
+        string pathSaveFile = @"C:\DataSprint5\OutPutDataFileTask7V18.txt";
         Console.WriteLine("Данные находятся в файле: " + path);
         Console.WriteLine("************************************************************************"); 
         Console.WriteLine("* РЕЗУЛЬТАТ:                                                           *"); 

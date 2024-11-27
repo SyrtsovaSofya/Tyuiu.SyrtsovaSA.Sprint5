@@ -11,7 +11,11 @@ public class DataService : ISprint5Task6V4
         {
             string line;
             while ((line = sr.ReadLine()) != null)
-                count += line.Where(c => c >= 'À' && c <= 'ß' || c == '¨').Count();
+            {
+                foreach(char c in line)
+                    if (c >= 'À' && c <= 'ß' || c == '¨')
+                        count++;
+            } 
         }
         return count;
     }

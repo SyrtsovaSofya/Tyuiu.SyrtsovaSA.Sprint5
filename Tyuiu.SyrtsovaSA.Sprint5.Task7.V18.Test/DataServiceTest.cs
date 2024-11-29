@@ -1,11 +1,11 @@
-using Tyuiu.SyrtsovaSA.Sprint5.Task7.V18.Lib; 
- 
-namespace Tyuiu.SyrtsovaSA.Sprint5.Task7.V18.Test; 
- 
-[TestClass] 
-public class DataServiceTest 
-{ 
-   [TestMethod]
+using Tyuiu.SyrtsovaSA.Sprint5.Task7.V18.Lib;
+
+namespace Tyuiu.SyrtsovaSA.Sprint5.Task7.V18.Test;
+
+[TestClass]
+public class DataServiceTest
+{
+    [TestMethod]
     public void CheckIfFileExists()
     {
         string path = @"C:\DataSprint5\InPutDataFileTask7V18.txt";
@@ -13,4 +13,4 @@ public class DataServiceTest
         bool fileExists = fileInfo.Exists;
         Assert.AreEqual(true, fileExists);
     }
-} 
+}

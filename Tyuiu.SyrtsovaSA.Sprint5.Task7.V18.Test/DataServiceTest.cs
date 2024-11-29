@@ -1,5 +1,3 @@
-using Tyuiu.SyrtsovaSA.Sprint5.Task7.V18.Lib;
-
 namespace Tyuiu.SyrtsovaSA.Sprint5.Task7.V18.Test;
 
 [TestClass]

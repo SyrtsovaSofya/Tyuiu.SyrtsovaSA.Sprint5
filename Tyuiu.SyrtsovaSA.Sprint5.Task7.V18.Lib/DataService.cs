@@ -10,6 +10,6 @@ public class DataService : ISprint5Task7V18
         str = str.Replace("н", "нн");
         string pathSaveFile = Path.Combine(Path.GetTempPath(), "OutPutDataFileTask7V18.txt");
         File.WriteAllText(pathSaveFile, str);
-        return pathSaveFile;
+        return pathSaveFile; 
     }
 }
